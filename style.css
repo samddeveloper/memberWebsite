@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    
+}
+#synergy-logo {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    cursor: pointer;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Ändra riktningen till kolumn för att placera h4 ovanför korten */
+    background-image: url(/images/AfterlightImage.png);
+    color: white;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.516); /* Mörk, semi-transparent färg */
+    z-index: -1; /* Sätt z-index till ett lägre värde än innehållet för att ligga bakom det */
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:118px ;
+    flex-wrap: wrap;
+}
+#fire {
+    width: 40px;
+    height: 40px;
+}
+.populär {
+    color: #f20b87;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around; /* För att centrera korten och lämna utrymme mellan dem */
+    align-items: center;
+}
+
+.card-container {
+    text-align: center; /* För att centrera innehållet inuti korten */
+    margin: 0 10px; /* Justera avståndet mellan korten efter behov */
+    background-color: #0c1115e8;
+    border-radius: 20px;
+    width: 400px;
+}
+
+p {
+    color: #ffffff5b;
+}
+
+
+.textContainer-left {
+    display: flex;
+    justify-content: center; /* Centrera innehållet horisontellt */
+    align-items: center;
+}
+
+.textContainer-left h1 {
+    margin: 0;
+    margin-right: 5px; /* Justera detta värde för att passa din layout */
+}
+
+.textContainer-left .currency {
+    white-space: nowrap; /* Förhindra radbrytning */
+}
+
+.textContainer-right {
+margin-bottom: 30px;
+}
+
+button {
+    background-color: #f20b87;
+    color: white;
+    border: none;
+    padding: 10px 70px 10px 70px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: #ee6d9c;
+}
+
+.checkboxContainer {
+    margin: 50px;
+}
+
+.checkboxContainer label {
+    display: flex;
+    align-items: center;
+}
+
+.checkboxContainer i {
+    margin-right: 10px; /* Justera avståndet mellan ikonen och texten */
+    color: green; /* Ändra färgen på checkmark-ikonen */
+    font-size: 20px; /* Ändra storleken på checkmark-ikonen */
+}
+
+@media only screen and (max-width: 600px) {
+    /* Mobilanpassade stilar */
+
+    body {
+        overflow-x: hidden; /* Förhindra horisontell scrollning */
+    }
+    .card-container {
+        width: 100%; /* Använd hela bredden på mindre skärmar */
+        max-width: none;
+    }
+
+    .container {
+        align-items: flex-start; /* Justera för att placera korten överst på sidan */
+        overflow-y: auto; /* Visa vertikal scrollbar om nödvändigt */
+        height: 100vh; /* Fyll hela skärmen vertikalt */
+        display: flex;
+        flex-direction: column;
+        width: 340px;
+    }
+    
+  .header {
+    display: none;
+  }
+  #synergy-logo {
+    display: none;
+  }
+}
+
+
+
+
+
+  
+
